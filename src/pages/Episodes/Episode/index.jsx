@@ -3,26 +3,26 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { CharacterCard } from "../../../components/Card";
 import charactersService from "../../../services/characters.service";
-import locationsService from "../../../services/locations.service";
+import episodesService from "../../../services/episodes.service";
 
-const LocationPage = () => {
+const EpisodePage = () => {
   const { id } = useParams();
-  const [location, setLocation] = useState({});
+  const [episode, setEpisode] = useState({});
   const [residents, setResidents] = useState([]);
 
   useEffect(() => {
-    locationsService
-      .getSingleLocation(id)
-      .then((location) => {
-        setLocation(location.data);
-        console.log(location.data);
+    episodesService
+      .getSingleEpisode(id)
+      .then((episode) => {
+        setEpisode(episode.data);
+        console.log(episode.data);
 
-        const residentsURL = location.data.residents
-          ? location.data.residents.map((url) => url.split("/")[5])
+        const charactersURL = episode.data.characters
+          ? episode.data.characters.map((url) => url.split("/")[5])
           : null;
 
         charactersService
-          .getMultipleCharacters(residentsURL)
+          .getMultipleCharacters(charactersURL)
           .then((allResident) => setResidents(allResident.data))
           .catch((error) => console.error(error));
       })
@@ -31,11 +31,11 @@ const LocationPage = () => {
 
   return (
     <div>
-      <h1>{location.name}</h1>
-      <h3>{location.type}</h3>
-      <h3>{location.dimension}</h3>
+      <h1>{episode.name}</h1>
+      <h3>{episode.air_date}</h3>
+      <h3>{episode.episode}</h3>
       <h3 className="my-4 text-lg font-bold text-center">
-        The Residents in this dimension
+        The Characters in this episode
       </h3>
       <div className="mt-4 flex flex-row justify-evenly items-center flex-wrap">
         {residents.length > 1 ? (
@@ -50,4 +50,4 @@ const LocationPage = () => {
   );
 };
 
-export default LocationPage;
+export default EpisodePage;
