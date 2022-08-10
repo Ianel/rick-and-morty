@@ -31,7 +31,7 @@ export const EpisodeCard = ({ id, name, air_date, episode, characters }) => {
     >
       <h1 className="text-center">{name}</h1>
       <h3>Air Date: {air_date}</h3>
-      <h4 className="text-center">Episde: {episode}</h4>
+      <h4 className="text-center">Episode: {episode}</h4>
     </Link>
   );
 };
