@@ -3,6 +3,9 @@ import MainLayout from "./layouts/main.layout";
 import HomePage from "./pages/Home";
 import CharactersPage from "./pages/Characters";
 import * as ROUTES from "./constants/routes";
+import CharacterPage from "./pages/Characters/Character";
+import LocationsPage from "./pages/Locations";
+import LocationPage from "./pages/Locations/Location";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <Routes>
           <Route path={ROUTES.HOME} element={<HomePage />}></Route>
           <Route path={ROUTES.CHARACTERS} element={<CharactersPage />}></Route>
+          <Route path={ROUTES.CHARACTER} element={<CharacterPage />}></Route>
+          <Route path={ROUTES.LOCATIONS} element={<LocationsPage />}></Route>
+          <Route path={ROUTES.LOCATION} element={<LocationPage />}></Route>
       </Routes>
     </MainLayout>
    </Router>
