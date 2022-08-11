@@ -44,9 +44,17 @@ const LocationPage = () => {
         </p>
       ) : (
         <div>
-          <h1>{location.name}</h1>
-          <h3>{location.type}</h3>
-          <h3>{location.dimension}</h3>
+          <h1 className="font-bold text-2xl text-center">
+            Name: {location.name}
+          </h1>
+          <div className="flex flex-row justify-around items-center">
+            <h3>
+              Type: <span className="font-bold">{location.type}</span>
+            </h3>
+            <h3>
+              From: <span className="font-bold">{location.dimension}</span>
+            </h3>
+          </div>
           <h3 className="my-4 text-lg font-bold text-center">
             The Residents in this dimension
           </h3>

@@ -43,9 +43,17 @@ const EpisodePage = () => {
         </p>
       ) : (
         <div>
-          <h1>{episode.name}</h1>
-          <h3>{episode.air_date}</h3>
-          <h3>{episode.episode}</h3>
+          <h3 className="font-bold text-2xl text-center">
+            Episode: <span>{episode.episode}</span>
+          </h3>
+          <div className="flex flex-row justify-around items-center">
+            <h1>
+              Name: <span className="font-bold">{episode.name}</span>
+            </h1>
+            <h3>
+              Air Date: <span className="font-bold">{episode.air_date}</span>
+            </h3>
+          </div>
           <h3 className="my-4 text-lg font-bold text-center">
             The Characters in this episode
           </h3>
