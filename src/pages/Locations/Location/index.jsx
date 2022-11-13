@@ -34,14 +34,18 @@ const LocationPage = () => {
           .catch((error) => console.error(error));
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [id]);
 
   return (
     <>
       {loading ? (
-        <p className="flex justify-center items-center text-2xl text-teal-500 font-bold">
-          Loading.....
-        </p>
+        <div className="flex flex-col justify-center items-center min-h-screen">
+          <div className="w-2/3 my-6 h-2 relative">
+            <div className="rounded-md bg-gray-500 h-2 absolute z-0 w-full"></div>
+            <div className="rounded-md bg-teal-500 h-2 absolute z-20 w-1/3 animate-slide"></div>
+          </div>
+          <p className="text-2xl text-teal-500 font-bold">Loading......</p>
+        </div>
       ) : (
         <div>
           <h1 className="font-bold text-2xl text-center">

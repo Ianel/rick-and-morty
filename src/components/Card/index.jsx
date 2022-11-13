@@ -5,7 +5,7 @@ import * as ROUTES from "../../constants/routes";
 export const CharacterCard = ({ id, image, name }) => {
   return (
     <Link to={`${ROUTES.CHARACTERS}/${id}`}>
-      <img src={image} alt={name} />
+      <img src={image} alt={name} loading="lazy" />
     </Link>
   );
 };
@@ -23,7 +23,7 @@ export const LocationCard = ({ id, name, type, dimension }) => {
   );
 };
 
-export const EpisodeCard = ({ id, name, air_date, episode, characters }) => {
+export const EpisodeCard = ({ id, name, air_date, episode }) => {
   return (
     <Link
       to={`${ROUTES.EPISODES}/${id}`}
