@@ -4,7 +4,7 @@
 
 Rick and Morty Web is a website talking about the famous animations series "Rick and Morty". It allows you to see all the characters, the locations and the episodes of the show.
 
-## Live Demo: [https://rick-and-morty-ian.netlify.app/](https://rick-and-morty-ian.netlify.app/)
+**Live Demo:** [https://rick-and-morty-ian.netlify.app/](https://rick-and-morty-ian.netlify.app/)
 
 ## Features
 
