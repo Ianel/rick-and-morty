@@ -13,7 +13,7 @@ Rick and Morty Web is a website talking about the famous animations series "Rick
 - List all episodes
 - Show informations about a character: image, name, status, origin, episodes starring the character
 - Show the characters living in a particular location
-- Show the characters starring in a particular episodes
+- Show the characters starring in a particular episode
 
 ## Running the project
 
