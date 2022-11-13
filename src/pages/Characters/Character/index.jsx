@@ -56,7 +56,7 @@ const CharacterPage = () => {
         </div>
       ) : (
         <div>
-          <div className="w-1/2 mx-auto shadow-lg flex flex-row">
+          <div className="lg:w-5/6 xl:w-1/2 md:w-full m-2 md:mx-auto shadow-lg flex flex-col lg:flex-row">
             <img src={character.image} alt={character.name} loading="lazy" />
             <div className="p-4 leading-10">
               <h1 className="text-xl font-bold">

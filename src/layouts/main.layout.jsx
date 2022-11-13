@@ -1,11 +1,15 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import Sidebar from "../components/SIdebar";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="flex flex-row justify-start items-stretch">
+    <div className="flex flex-col md:flex-row md:justify-start md:items-stretch">
       <Sidebar />
-      <main className="p-4 absolute right-0 top-0 w-5/6">{children}</main>
+      <Navbar />
+      <main className="p-4 md:absolute md:right-0 md:top-0 md:w-2/3 lg:w-5/6">
+        {children}
+      </main>
     </div>
   );
 };

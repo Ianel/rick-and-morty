@@ -1,41 +1,41 @@
 import React from "react";
+import { FaGlobeAfrica, FaTv, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import rickAndMorty from "../../assets/rick-morty.png";
-import { FaUser, FaGlobeAfrica, FaTv } from "react-icons/fa";
 import * as ROUTES from "../../constants/routes";
+import rickAndMorty from "../../assets/rick-morty.png";
 
-const Sidebar = () => {
+const Navbar = () => {
   return (
-    <div className="hidden md:w-1/3 lg:w-1/6 fixed top-0 left-0 h-screen bg-gray-200 md:flex md:flex-col">
+    <div className="bg-gray-200 flex flex-col items-center md:hidden">
       <div className="flex flex-col items-center">
         <Link to={ROUTES.HOME}>
           <img
-            className="w-40"
+            className="w-24"
             src={rickAndMorty}
             alt="Rick and Morty"
             loading="lazy"
           />
         </Link>
-        <h1 className="text-lg break-words">Rick and Morty</h1>
+        <h1 className="text-lg my-3">Rick and Morty</h1>
       </div>
-      <nav className="mt-5">
+      <nav className="flex flex-row justify-center items-center">
         <Link
           to={ROUTES.CHARACTERS}
-          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-2 px-4 py-2"
+          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-x-2 px-4 py-2"
         >
           <FaUser />
           <p>Characters</p>
         </Link>
         <Link
           to={ROUTES.LOCATIONS}
-          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-2 px-4 py-2"
+          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-x-2 px-4 py-2"
         >
           <FaGlobeAfrica />
           <p>Locations</p>
         </Link>
         <Link
           to={ROUTES.EPISODES}
-          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-2 px-4 py-2"
+          className="flex flex-row items-center hover:text-white hover:bg-green-700 gap-x-2 px-4 py-2"
         >
           <FaTv />
           <p>Episodes</p>
@@ -45,4 +45,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;

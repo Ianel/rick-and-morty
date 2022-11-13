@@ -29,9 +29,7 @@ const Characters = () => {
       })
       .catch((error) => console.error(error))
       .finally(() => {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 10000);
+        setIsLoading(false);
       });
   }, []);
 
@@ -44,9 +42,7 @@ const Characters = () => {
       })
       .catch((error) => console.error(error))
       .finally(() => {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 10000);
+        setIsLoading(false);
       });
   }, [page]);
 
